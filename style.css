@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: #000;
+}
+
+/*ALERTA PERSONALIZADA*/
+
+
+
+.alert {
+  margin-top: 125px;
+  padding: 20px;
+  background-color: #000;
+  font-size: 30px;
+  color: white;
+  border-radius: 10px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: #000;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px #000 solid;
+  padding-left: 3px;
+  padding-right:4px;
+  padding-top: 1px;
+  width: 2rem;
+  border-radius: 10px;
+}
+
+.play-button {
+  display: grid;
+  place-items: center;
+  box-shadow: 1px 1px 10px ;
+  margin-left: 60px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px #ff0000 solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.play {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  margin-left: 550px;
+}
+
+
+.play-button:hover {
+  background-color: #000;
+}
+
+.closebtn:hover {
+  color: #ff0000;
+}
+
+/*aqui la imegen 1*/
+
+.alert {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-evenly;
+}
+ 
+.botones a {
+text-decoration: none;
+padding: 3px;
+}
+
+.firstB{
+  background: #ff0000;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px #ff0000 solid;
+  box-shadow: 1px 1px 10px;
+}
+
+.firstB:hover {
+  background: #000;
+  color: red;
+}
+
+.imagen1 {
+  transform: translateX(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+}
+  50% {
+    transform: translateY(-60px);
+}
+  100% {
+    transform: translateY(0px);
+}
+}
+
+.imagen0 {
+  width: 70%; 
+}
+
+/*ANIMATION ALERT*/
+.alert {
+  transform: translateX(0px);
+animation: float2 6s ease-in-out infinite;                                                                                                                                                                                                                                                                                                                                                                                                                                                
+}
+
+@keyframes float2 {
+0% {
+  transform: translateX(0px);
+}
+50% {
+  transform: translateX(-10px);
+}
+100% {
+  transform: translateX(0px);
+}
+}
+
