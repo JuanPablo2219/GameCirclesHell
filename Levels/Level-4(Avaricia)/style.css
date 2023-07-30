@@ -16,7 +16,7 @@ body{
     height: 480px;
     margin: 0 auto;    
     position: relative;
-    background: linear-gradient(#143562, transparent) #ffe2d1;
+    background: linear-gradient(#d45f3b, transparent) #a88571;
     overflow: hidden;
 
 }
@@ -111,7 +111,7 @@ body{
     bottom: 16px;
     left: 600px;
     z-index: 1;
-    background: url() no-repeat;
+    background: url(img/coin.gif) no-repeat;
     background-size: 43px 74px;
     background-position-x: 0px;
 }
@@ -119,7 +119,7 @@ body{
 
     width: 105px;
     height: 80px;
-    background: url() no-repeat;
+    background: url(img/coin.gif) no-repeat;
     background-size: 80px 90px;
     background-position-x: 0px;
 }

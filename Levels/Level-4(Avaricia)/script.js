@@ -81,3 +81,33 @@ function HandleKeyDown(ev) {
         Jump();
     }
 }
+
+function Jump() {
+    if (playerPosY === groundY) {
+        isJumping = true;
+        velY = impulse;
+        player.classList.remove("player-running");
+    }
+}
+
+function MovePlayer() {
+    playerPosY += velY * deltaTime;
+    if (playerPosY < groundY) {
+        TouchGround();
+    }
+    player.style.bottom = playerPosY + "px";
+}
+
+function TouchGround() {
+    playerPosY = groundY;
+    velY = 0;
+    if (isJumping) {
+        player.classList.add("player-running");
+    }
+    isJumping = false;
+}
+
+function MoveGround() {
+    groundX += CalculateDisplacement();
+    ground.style.left = -(groundX % container.clientWidth) + "px";
+}
