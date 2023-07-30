@@ -111,3 +111,27 @@ function MoveGround() {
     groundX += CalculateDisplacement();
     ground.style.left = -(groundX % container.clientWidth) + "px";
 }
+
+function CalculateDisplacement() {
+    return groundVel * deltaTime * gameVel;
+}
+
+function Crash() {
+    player.classList.remove("player-running");
+    player.classList.add("player-crashed");
+    isStopped = true;
+}
+
+function DecideCreateObstacles() {
+    timeToObstacle -= deltaTime;
+    if (timeToObstacle <= 0) {
+        CreateObstacle();
+    }
+}
+
+function DecideCreateClouds() {
+    timeToCloud -= deltaTime;
+    if (timeToCloud <= 0) {
+        CreateCloud();
+    }
+}
