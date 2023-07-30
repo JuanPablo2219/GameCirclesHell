@@ -33,3 +33,22 @@ let groundVel = 1280 / 3;
 let gameVel = 1;
 let score = 0;
 
+let timeToObstacle = 2;
+let minObstacleTime = 0.7;
+let maxObstacleTime = 1.8;
+let obstaclePosY = 16;
+let obstacles = [];
+
+let timeToCloud = 0.5;
+let minCloudTime = 0.7;
+let maxCloudTime = 2.7;
+let maxCloudY = 270;
+let minCloudY = 100;
+let clouds = [];
+let cloudVel = 0.5;
+
+let container;
+let player;
+let scoreText;
+let ground;
+let gameOver;
