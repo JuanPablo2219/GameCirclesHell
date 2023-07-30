@@ -33,6 +33,9 @@ let groundVel = 1280 / 3;
 let gameVel = 1;
 let score = 0;
 
+let isStopped = false;
+let isJumping = false;
+
 let timeToObstacle = 2;
 let minObstacleTime = 0.7;
 let maxObstacleTime = 1.8;
@@ -190,4 +193,46 @@ function MoveClouds() {
             clouds[i].style.left = clouds[i].posX + "px";
         }
     }
+}
+
+function GainPoints() {
+    score++;
+    scoreText.innerText = score;
+    if (score == 5) {
+        gameVel = 1.5;
+    } else if (score == 10) {
+        gameVel = 2;
+    } else if (score == 20) {
+        gameVel = 3;
+    }
+    ground.style.animationDuration = (3 / gameVel) + "s";
+}
+
+function GameOver() {
+    Crash();
+    gameOver.style.display = "block";
+}
+
+function DetectCollision() {
+    for (let i = 0; i < obstacles.length; i++) {
+        if (obstacles[i].posX > playerPosX + player.clientWidth) {
+            break; 
+        } else {
+            if (IsCollision(player, obstacles[i], 10, 30, 15, 20)) {
+                GameOver();
+            }
+        }
+    }
+}
+
+function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft) {
+    let aRect = a.getBoundingClientRect();
+    let bRect = b.getBoundingClientRect();
+
+    return !(
+        ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
+        (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
+        ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
+        (aRect.left + paddingLeft > (bRect.left + bRect.width))
+    );
 }
