@@ -52,3 +52,32 @@ let player;
 let scoreText;
 let ground;
 let gameOver;
+
+function Start() {
+    gameOver = document.querySelector(".game-over");
+    ground = document.querySelector(".ground");
+    container = document.querySelector(".container");
+    scoreText = document.querySelector(".score");
+    player = document.querySelector(".player");
+    document.addEventListener("keydown", HandleKeyDown);
+}
+
+function Update() {
+    if (isStopped) return;
+
+    MovePlayer();
+    MoveGround();
+    DecideCreateObstacles();
+    DecideCreateClouds();
+    MoveObstacles();
+    MoveClouds();
+    DetectCollision();
+
+    velY -= gravity * deltaTime;
+}
+
+function HandleKeyDown(ev) {
+    if (ev.keyCode == 32) {
+        Jump();
+    }
+}
