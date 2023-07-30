@@ -19,3 +19,17 @@ function GameLoop() {
     Update();
     requestAnimationFrame(GameLoop);
 }
+
+let groundY = 22;
+let velY = 0;
+let impulse = 900;
+let gravity = 2500;
+
+const playerPosX = 42;
+let playerPosY = groundY;
+
+let groundX = 0;
+let groundVel = 1280 / 3;
+let gameVel = 1;
+let score = 0;
+

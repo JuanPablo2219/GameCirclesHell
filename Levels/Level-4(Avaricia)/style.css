@@ -33,3 +33,32 @@ body{
     background-size: 50% 62px;
 
 }
+
+.player {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+    background: url(img/dante-unscreen.gif) repeat-x 0px 0px;
+    background-size: 160px 105px;
+    background-position-x: 0px;
+
+}
+
+.run {
+   animation: animarPlayer 0.20 steps(3) infinite; 
+}
+@keyframes animarPlayer{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
+
+.player-crash {
+    background-position-x: -252px;
+}
