@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-image:url();
+    display: flex;
+    align-items: center;
+}
+
+.container {
+
+    width: 1030px;
+    height: 480px;
+    margin: 0 auto;    
+    position: relative;
+    background: linear-gradient(#143562, transparent) #ffe2d1;
+    overflow: hidden;
+
+}
+
+.ground {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(img/sudaback.png) repeat-x 0px 0px;
+    background-size: 50% 62px;
+
+}
