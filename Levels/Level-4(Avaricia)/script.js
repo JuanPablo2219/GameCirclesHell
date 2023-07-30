@@ -135,3 +135,59 @@ function DecideCreateClouds() {
         CreateCloud();
     }
 }
+
+function CreateObstacle() {
+
+    let obstacle = document.createElement("div");
+    container.appendChild(obstacle);
+    obstacle.classList.add("cactus");
+
+    if (Math.random() > 0.5) obstacle.classList.add("cactus2");
+    obstacle.posX = container.clientWidth;
+    obstacle.style.left = container.clientWidth + "px";
+
+    obstacles.push(obstacle);
+    timeToObstacle = minObstacleTime + Math.random() * (maxObstacleTime - minObstacleTime) / gameVel;
+}
+
+function CreateCloud() {
+
+    let cloud = document.createElement("div");
+    container.appendChild(cloud);
+    cloud.classList.add("cloud");
+    cloud.posX = container.clientWidth;
+    cloud.style.left = container.clientWidth + "px";
+    cloud.style.bottom = minCloudY + Math.random() * (maxCloudY - minCloudY) + "px";
+
+    clouds.push(cloud);
+    timeToCloud = minCloudTime + Math.random() * (maxCloudTime - minCloudTime) / gameVel;
+}
+
+function MoveObstacles() {
+
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+        if (obstacles[i].posX < -obstacles[i].clientWidth) {
+            obstacles[i].parentNode.removeChild(obstacles[i]);
+            obstacles.splice(i, 1);
+            GainPoints();
+        } 
+        else {
+            obstacles[i].posX -= CalculateDisplacement();
+            obstacles[i].style.left = obstacles[i].posX + "px";
+        }
+    }
+}
+
+function MoveClouds() {
+
+    for (let i = clouds.length - 1; i >= 0; i--) {
+        if (clouds[i].posX < -clouds[i].clientWidth) {
+            clouds[i].parentNode.removeChild(clouds[i]);
+            clouds.splice(i, 1);
+        } 
+        else {
+            clouds[i].posX -= CalculateDisplacement() * cloudVel;
+            clouds[i].style.left = clouds[i].posX + "px";
+        }
+    }
+}
