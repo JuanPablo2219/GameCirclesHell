@@ -244,3 +244,73 @@ function updaterstateJuego(){
 		textresponse.counter = -1;
 	}
 }
+function hit(a,b){
+	let hit = false;
+	if(b.x + b.width >= a.x && b.x < a.x + a.width){
+		if(b.y + b.height >= a.y && b.y  < a.y + a.height){
+			hit = true;
+		}
+	}
+	if(b.x <= a.x && b.x + b.width >= a.x + a.width){
+		if( b.y <= a.y && b.y + b.height >= a.y + a.height){
+			hit = true;
+		}
+	}
+	if(a.x <= b.x && a.x + a.width >= b.x + b.width){
+		if( a.y <= b.y && a.y + a.height >= b.y + b.height){
+			hit = true;
+		}
+	}
+	return hit;
+}
+function verifycontact(){
+	for(let i in shots){
+		let Shooting = shots[i];
+		for(j in enemies){
+			let enemy = enemies[j];
+			if(hit(Shooting,enemy)){
+				enemy.state = 'hit';
+				enemy.counter = 0;
+			}
+		}
+	}
+	if(ship.state == 'hit' || ship.state == 'muerto') return; 
+	for(let i  in shotsenemies){
+		let Shooting = shotsenemies[i];
+		if (hit(Shooting, ship)){
+			ship.state = 'hit';
+			console.log('contact');
+		}
+	}
+}
+
+
+function aleatorio(lower, upper){
+	let odds = upper - lower;
+	let a = Math.random() * odds;
+	a = Math.floor(a);
+	return parseInt(lower) + a;
+}
+
+function frameLoop(){
+	updaterstateJuego();
+	moveship();
+	moveshots();
+	moveshotsenemies();
+	drawbackground();
+	verifycontact();
+	updateenemies();
+
+	drawenemies();
+	drawshotsenemies();
+	drawshots();
+	drawtext();
+	drawship();
+}
+
+
+window.addEventListener('load', init);
+function init(){
+	addeventskeyboard();
+	loadMedia();
+}
