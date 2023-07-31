@@ -1,27 +1,12 @@
 export default class Bullet {
-  //   colors = [
-  //     "red",
-  //     "blue",
-  //     "red",
-  //     "green",
-  //     "yellow",
-  //     "orange",
-  //     "purple",
-  //     "pink",
-  //     "brown",
-  //     "grey",
-  //   ];
 
   constructor(x, y, speed, damage) {
     this.x = x;
     this.y = y;
     this.speed = speed;
     this.damage = damage;
-
     this.width = 10;
     this.height = 15;
-    this.color = "whirete";
-    // this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
   }
 
   draw(ctx) {

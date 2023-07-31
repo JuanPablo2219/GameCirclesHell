@@ -17,27 +17,24 @@ const player = new Player(
 
 const enemies = [
 
-  new Enemy(120, 20, "white", 3,),
-  // new Enemy(220, white, "red", 10),
-  new Enemy(320, 20, "white", 2),
-  // new Enemy(420, white, "green", 20),
-  new Enemy(520, 20, "white", 4),
+  new Enemy(120, 20, "white", 4,),
+  // new Enemy(220, 20, "white", 5,),
+  new Enemy(320, 20, "white", 9),
+  new Enemy(420, 20, "white", 6),
+  new Enemy(520, 20, "white", 5),
   new Enemy(620, 20, "white", 7),
-  // new Enemy(720, white, "red", 5),
-  new Enemy(820, 20, "white", 2),
-  // new Enemy(900, 20, "green", 2),
-  // new Enemy(1000, 20, "gold", 20),
+  // new Enemy(720, 20, "white", 9),
+  new Enemy(820, 20, "white", 4),
+  
   // fila 2
-  new Enemy(120, 100, "white", 2),
-  new Enemy(220, 100, "white", 4),
-  // new Enemy(320, 100, "gold", 12),
-  new Enemy(420, 100, "white", 8),
-  // new Enemy(520, white, "gold", 5),
-  new Enemy(620, 100, "white", 5),
-  new Enemy(720, 100, "white", 8),
-  new Enemy(820, 100, "white", 5),
-  // new Enemy(900, 100, "green", 14),
-  // new Enemy(1000, 100, "gold", 10),
+  new Enemy(120, 100, "white", 8),
+  new Enemy(220, 100, "white", 3),
+  // new Enemy(320, 100, "white", 7),
+  new Enemy(420, 100, "white", 5),
+  new Enemy(520, 100, "white", 3),
+  // new Enemy(620, 100, "white", 7),
+  new Enemy(720, 100, "white", 9),
+  new Enemy(820, 100, "white", 5),  
 ];
 
 // temporizador
@@ -64,24 +61,16 @@ function comenzarJuego() {
   }, 100);
 
   return TIMEFULL
-
 }
 
 
 document.getElementsByTagName("button")['0'].disabled = true;
 document.getElementById("second");
-
 comenzarJuego();
-
-
-
-
-
 
 
 function gameLoop() {
   setCommonStyle();
-  ctx.fillStyle = "gren";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   bulletController.draw(ctx);
   player.draw(ctx);
