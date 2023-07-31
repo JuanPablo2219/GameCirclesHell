@@ -5,8 +5,16 @@
 
 body{
     height: 100vh;
-    background-image:url();
-    display: flex;
+    margin: 0;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image:url(img/avariciaback.jpg);
+    display:flex;
     align-items: center;
 }
 
