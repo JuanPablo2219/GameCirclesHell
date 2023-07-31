@@ -192,3 +192,55 @@ function fire(){
 		height: 30
 	});
 }
+function drawshots(){
+	ctx.save();
+	ctx.fillStyle = 'black';
+	for ( var i in shots){
+		var Shooting = shots[i];
+		ctx.fillRect(Shooting.x, Shooting.y, Shooting.width, Shooting.height);
+	}
+	ctx.restore();
+}
+function drawtext(){
+	if(textresponse.counter == -1) return;
+	let alpha = textresponse.counter/50.0;
+	if(alpha>1){
+		for(let i in enemies){
+			delete enemies[i];
+		}
+	}
+	ctx.save();
+	ctx.globalAlpha = alpha;
+	if(juego.state == 'perdido'){
+		ctx.fillStyle = 'black';
+		ctx.font = '40pt Arial';
+		ctx.fillText(textresponse.title, 140, 100);
+		ctx.font = '20pt Arial';
+		ctx.fillText(textresponse.subtitle, 100, 150);
+	}
+	if(juego.state == 'victoria'){
+		ctx.fillStyle = 'black';
+		ctx.font = '40pt Arial';
+		ctx.fillText(textresponse.title, 140, 70);
+		ctx.font = '20pt Arial';
+		ctx.fillText(textresponse.subtitle, 100, 180);
+	}
+	ctx.restore();
+}
+
+function updaterstateJuego(){
+	if(juego.state == 'jugando' && enemies.length == 0){
+		juego.state = 'victoria';
+		textresponse.title = 'Derrotaste a los enemies';
+		textresponse.subtitle = 'Presiona la tecla R para reiniciar';
+		textresponse.counter = 0;
+	}
+	if(textresponse.counter >= 0){
+		textresponse.counter++;
+	}
+	if ((juego.state == 'perdido' || juego.state == 'victoria') && keyboard[82]){
+		juego.state = 'iniciando';
+		ship.state = 'vivo';
+		textresponse.counter = -1;
+	}
+}
