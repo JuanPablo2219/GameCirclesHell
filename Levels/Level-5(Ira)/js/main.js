@@ -48,3 +48,63 @@ function drawenemies(){
 function drawbackground(){
 	ctx.drawImage(background,0,0);
 }
+function drawship(){
+	ctx.save();
+	ctx.fillStyle = 'white';
+	ctx.fillRect(ship.x, ship.y, ship.width, ship.height);
+	ctx.restore();
+}
+function addeventskeyboard(){
+	addevent(document,"keydown", function(e){
+
+		keyboard[e.keyCode] = true;
+		console.log(e.keyCode);
+	});
+
+	addevent(document,"keyup", function(e){
+
+		keyboard[e.keyCode] = false;
+	});
+	function addevent(element, nombreevent, funcion){
+		if (element.addEventListener) {
+
+			element.addEventListener(nombreevent,funcion,false);
+		} else if(element.attachEvent){
+
+			element.attachEvent(nombreevent,funcion);
+		}
+	}
+}
+
+function moveship(){
+	if (keyboard[37]) {
+
+		ship.x -=6;
+		if(ship.x < 0) ship.x = 0;
+	} 
+	if (keyboard[39]) {
+
+		let limite = canvas.width - ship.width;
+		ship.x +=6;
+		if(ship.x > limite) ship.x = limite;
+	}
+	if(keyboard[32]){
+		
+		if(!keyboard.fire){
+			fire();
+			keyboard.fire = true;
+		}
+	} 
+	else keyboard.fire = false;
+	if(ship.state == 'hit'){
+		ship.counter++;
+		if(ship.counter >= 20){
+			ship.counter = 0;
+			ship.state = 'muerto';
+			juego.state = 'perdido';
+			textresponse.title ='juego Over';
+			textresponse.subtitle = 'Presiona la tecla R para reiniciar';
+			textresponse.counter = 0;
+		}
+	}
+}
