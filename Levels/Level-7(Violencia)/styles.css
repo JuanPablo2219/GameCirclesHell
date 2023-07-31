@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-image: url("img/the-witch-2.gif"); /*POner imagen de fondo*/
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: #e1dede;
+  margin-top: 190px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#word-container {
+  margin-top: 20px;
+  color: hsl(0, 12%, 93%);
+  margin-left: auto;
+  margin-right: 110px;
+}
+
+#guesses-container {
+  margin-top: 20px;
+  color: #e1dede;
+  margin-left: auto;
+  margin-right: 110px;
+}
+
+#input-container {
+  margin-top: 20px;
+  margin-top: #cf2323;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*bott plab*/
+#letter-input {
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  padding: 5px 10px;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game-container {
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#progress-container {
+  color: #ffffff;
+  margin-left: auto;
+  margin-right:110px;
+}
+
+#letter-input::placeholder {
+  color: #ffffff;
+}
+
+button {
+  color: #fff;
+  background-color: #ff0000;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+#letter-input::placeholder {
+  color: #000000; /* Cambia el color del placeholder aquí */
+}
