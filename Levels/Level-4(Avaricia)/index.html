@@ -10,14 +10,12 @@
 <body>
 
     <div class="container">
-        <div><h2>Score: <span id="scoreText" class="score">0</span></h2></div>
+        <div id="scoreText" class="score">0</div>
     
 
     <div class="game-over" style="display: none;">
     <h1>Game Over</h1>
     </div>
-
-  <script src="script.js"></script>
 
         <div class="ground"></div>
         
@@ -28,9 +26,19 @@
     </div>    
     <script src="script.js"></script>
 
-    <button id="bnWin" class="bnWin">Next Level</button>
-    <button id="bnregresar" class="breverse">Regresar  </button>
   </div>
+
+  <div class="buttons">
+    <button id="bnregresar" class="breverse">Regresar  </button>
+    <button id="bnWin" class="bnWin">Next Level</button>
+
+  </div>
+
+    <div class="buttons">
+
+  
+    </div>
+
   <script>
     document.getElementById("bnregresar").addEventListener("click", function() {
       window.location.href = "start.html";

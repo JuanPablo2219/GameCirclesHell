@@ -240,6 +240,8 @@ function GainPoints() {
 function GameOver() {
     Crash();
     gameOver.style.display = "block";
+    /*location.reload();*/
+
 }
 
 function DetectCollision() {
