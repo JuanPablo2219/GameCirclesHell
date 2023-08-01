@@ -195,7 +195,7 @@ function MoveClouds() {
     }
 }
 
-function GainPoints() {
+/*function GainPoints() {
     score++;
     scoreText.innerText = score;
     if (score == 5) {
@@ -203,11 +203,40 @@ function GainPoints() {
     } else if (score == 10) {
         gameVel = 2;
     } else if (score == 20) {
-        gameVel = 3;
+       gameVel = 3;
     }
     ground.style.animationDuration = (3 / gameVel) + "s";
 }
-
+*/
+function GainPoints() {
+    score++;
+    scoreText.innerText = score;
+    if (score == 5) {
+      gameVel = 1.5;
+    } else if (score == 10) {
+      gameVel = 2;
+    } else if (score == 20) {
+      pausarJuegoYGanaste();
+    }
+  }
+  
+  function pausarJuegoYGanaste() {
+    pausarJuego();
+    showButtonWin();
+  }
+  
+  function pausarJuego() {
+    isStopped = true;
+  }
+  
+  function showButtonWin() {
+    let botonWin = document.getElementById("bnWin");
+    botonWin.style.display = "block";
+    botonWin.addEventListener("click", function () {
+      window.location.href = "start.html"; 
+    });
+  }
+  
 function GameOver() {
     Crash();
     gameOver.style.display = "block";
@@ -236,3 +265,18 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
         (aRect.left + paddingLeft > (bRect.left + bRect.width))
     );
 }
+
+  /*function aumentarPuntaje() {
+    score++;
+    if (score === 10) {
+      mostrarBotonContinuar();
+    }
+  }
+  function mostrarBotonContinuar() {
+    let botonContinuar = document.getElementById("btn-continuar");
+    botonContinuar.style.display = "block";
+    botonContinuar.addEventListener("click",
+     function() {
+              window.location.href = "otra_pagina.html";
+    });
+  }*/

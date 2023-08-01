@@ -10,12 +10,23 @@
 <body>
 
     <div class="container">
+        <div class="score">0</div>
+
+        <h1>score: <span class="score">0</span></h1>
+
+  <button id="btn-continuar" style="display: none;">Continuar</button>
+  <button id="bnWIN" style="display: none;">Ganaste</button>
+
+  <div class="game-over" style="display: none;">
+    <h2>Game Over</h2>
+    <p> Score: <span class="final-score">0</span></p>
+  </div>
+
+  <script src="script.js"></script>
 
         <div class="ground"></div>
         
         <div class="player run"></div>
-
-        <div class="score">0</div>
 
         <div class="user">Jugador</div>
 
@@ -25,5 +36,8 @@
     
     <script src="script.js"></script>
     
+    <h1>Score: <span id="scoreText">0</span></h1>
+  <button id="btn-continuar" style="display: none;">Continuar</button>
+
 </body>
 </html>
