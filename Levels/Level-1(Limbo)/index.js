@@ -53,6 +53,7 @@ function comenzarJuego() {
 
     if (timeRest <= 0) {
       clearInterval(temporizate);
+      document.getElementsByTagName("button")['0'].style.display = "block";
       
       timeRest = TIMEFULL;
 
@@ -64,7 +65,7 @@ function comenzarJuego() {
 }
 
 
-document.getElementsByTagName("button")['0'].disabled = true;
+document.getElementsByTagName("button")['0'].style.display = "none";
 document.getElementById("second");
 comenzarJuego();
 
@@ -95,3 +96,5 @@ function setCommonStyle() {
 }
 
 setInterval(gameLoop, 1000 / 60);
+
+

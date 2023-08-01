@@ -12,3 +12,7 @@ function closeAlert() {
     let imageContainer = document.getElementById("imageContainer");
     imageContainer.classList.remove("hidden");
   }
+
+  function retryGame(){
+    location.reload();
+  }
