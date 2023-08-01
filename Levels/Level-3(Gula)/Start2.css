@@ -6,7 +6,7 @@ body {
   
   img{
    position:relative;
-    left: 14%;
+    left: 10%;
     padding: 4%;
     border-radius: 10%;
   }
@@ -14,11 +14,11 @@ body {
   .btn-infierno{
       position: relative;
       top: 50%;
-      left: 50%;
+      left: 45%;
   }
   
   .btn-infierno {
-    padding: 12px 24px;
+    padding: 10px 14px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
