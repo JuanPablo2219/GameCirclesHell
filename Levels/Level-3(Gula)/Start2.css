@@ -57,13 +57,10 @@ body {
       color: #000000; 
     }
     
-  
-    .cont3 {
-      display: flex; 
-      justify-content: space-around; 
-    }
-   
+    
   .cont3 {
+    display: flex; 
+    justify-content: space-around;
     flex: 1;
     font-size: 21px;
     text-align: right; 
