@@ -142,7 +142,7 @@ h2{
     left: 600px;
     z-index: 1;
     background: url(img/coin.gif) no-repeat;
-    background-size: 43px 74px;
+    background-size: 33px 64px;
     background-position-x: 0px;
 }
 .cactus2{
@@ -150,7 +150,7 @@ h2{
     width: 105px;
     height: 80px;
     background: url(img/coin.gif) no-repeat;
-    background-size: 43px 74px;
+    background-size: 33px 64px;
     background-position-x: 0px;
 }
 
