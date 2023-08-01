@@ -104,7 +104,7 @@ function moveship(){
 			ship.counter = 0;
 			ship.state = 'muerto';
 			juego.state = 'perdido';
-			textresponse.title ='juego Over';
+			textresponse.title ='Game Over';
 			textresponse.subtitle = 'Presiona la tecla R para reiniciar';
 			textresponse.counter = 0;
 		}
