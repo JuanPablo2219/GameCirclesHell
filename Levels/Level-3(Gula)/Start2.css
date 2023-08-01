@@ -11,13 +11,10 @@ body {
     border-radius: 10%;
   }
   
-  .btn-infierno{
-      position: relative;
-      top: 50%;
-      left: 45%;
-  }
-  
   .btn-infierno {
+    position: relative;
+    top: 50%;
+    left: 45%;
     padding: 10px 14px;
     font-size: 16px;
     font-weight: bold;
