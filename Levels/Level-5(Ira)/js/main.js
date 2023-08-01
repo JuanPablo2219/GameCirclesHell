@@ -48,6 +48,8 @@ function drawenemies(){
 function drawbackground(){
 	ctx.drawImage(background,0,0);
 }
+
+
 function drawship(){
 	ctx.save();
 	ctx.fillStyle = 'white';
@@ -192,6 +194,8 @@ function fire(){
 		height: 30
 	});
 }
+
+
 function drawshots(){
 	ctx.save();
 	ctx.fillStyle = 'black';
