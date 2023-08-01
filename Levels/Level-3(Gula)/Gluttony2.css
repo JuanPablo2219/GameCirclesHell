@@ -26,12 +26,13 @@ body {
 }
 
 .game-details{
-    color: #e9e5e5;
+    color: #ffffff;
     font-size: 1.6rem;
-    font-weight: 500;
-    padding: 20px 28px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+}
+.score{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .play-board{
