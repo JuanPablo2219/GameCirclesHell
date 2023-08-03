@@ -37,8 +37,8 @@ let isStopped = false;
 let isJumping = false;
 
 let timeToObstacle = 2;
-let minObstacleTime = 0.7;
-let maxObstacleTime = 1.8;
+let minObstacleTime = 0.9;
+let maxObstacleTime = 2.0;
 let obstaclePosY = 16;
 let obstacles = [];
 
@@ -80,7 +80,7 @@ function Update() {
 }
 
 function HandleKeyDown(ev) {
-    if (ev.keyCode == 32) {
+    if (ev.keyCode === 32) {
         Jump();
     }
 }
@@ -214,8 +214,22 @@ function GainPoints() {
     if (score == 5) {
       gameVel = 1.5;
     } else if (score == 10) {
-      gameVel = 2;
+      gameVel = 1.9;
     } else if (score == 20) {
+        gameVel = 2.4;
+      } 
+    else if (score == 30) {
+        gameVel = 2.7;
+      } 
+      else if (score == 35) {
+        gameVel = 3.2;
+      } 
+      else if (score == 50) {
+        gameVel = 3.2;
+      } else if (score == 70) {
+        gameVel = 3.2;
+      } 
+    else if (score == 40) {
       pausarJuegoYGanaste();
     }
   }
