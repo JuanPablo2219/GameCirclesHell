@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISAAC GUERRA</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div id="scoreText" class="score">0</div>
+
+    <div class="game-over" style="display: none;">
+    <h1>Game Over</h1>
+    </div>
+
+        <div class="ground"></div>
+        
+        <div class="player run"></div>
+
+        <div class="user">Jugador</div>
+
+    </div>    
+    <script src="script.js"></script>
+
+  </div>
+
+  <div class="buttons">
+    <button id="bnregresar" class="breverse">Regresar  </button>
+    <button id="bnWin" class="bnWin">Next Level</button>
+  </div>
+
+    </div>
+
+  <script>
+    document.getElementById("bnregresar").addEventListener("click", function() {
+      window.location.href = "start.html";
+    });
+  </script>
+
+    
+</body>
+</html>
