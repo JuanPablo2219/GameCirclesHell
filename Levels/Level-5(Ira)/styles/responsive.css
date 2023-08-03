@@ -1,0 +1,80 @@
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.menu-item:link,
+.menu-item:visited {
+    display: block;
+    color: #ffffff;
+}
+
+.menu-item:hover,
+.menu-item:active {
+    color: #000000;
+    background: #dddddd;
+}
+
+.menu li > .menu-item {
+    padding: .5em .9em;
+}
+
+
+
+/* imagenes inicio */
+@media screen and ( min-width: 768px) {
+
+    body {
+        font-size: 20px;
+    }
+    .menu {
+        font-size: 25px;
+    }
+    
+    .collage .image:after {
+        font-size: 50px;
+    }
+    
+    .collage-image {
+        background-position: center;
+        width: 50%;
+        height: 400px;
+    }
+    
+}
+
+
+@keyframes animacion {
+    0% { color: red; }
+    50% { color: rgb(30, 0, 255); }
+    
+}
+
+.texto-animado {
+    animation: animacion 5s linear infinite;
+    
+}
+.novedoso-btn {
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+   
+  }
+
+ 
+  .container {
+    position: relative;
+  }

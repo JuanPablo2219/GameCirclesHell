@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de Adivinar la Palabra</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Juego de Adivinar la Palabra</h1>
+  <div id="game-container">
+    <div id="progress-container">
+      <p>Palabras restantes: <span id="words-remaining"></span></p>
+    </div>
+    <div id="word-container">
+      <p id="word"></p> 
+    </div>
+    <div id="guesses-container">
+      <p>Intentos restantes: <span id="guesses"></span></p>
+      <p>Letras adivinadas: <span id="letters-guessed"></span></p>
+    </div>
+    <div id="input-container">
+      <input type="text" id="letter-input" placeholder="Ingresa una letra">
+      <button onclick="guessLetter()">Adivinar</button>
+      <button onclick="getHint()">Pista</button>
+      <button id="finally">Volver a Inicio</button>
+    </div>
+  </div>
+
+  <audio id="background-audio" src="Audio_001.m4a" autoplay loop></audio>
+
+  <script src="script.js"></script>
+  <script src="music.js"> </script>
+</body>
+</html>

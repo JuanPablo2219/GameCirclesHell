@@ -1,0 +1,100 @@
+<!DOCTYPE html lang="en">
+
+<lang>
+<head>
+	<title>Juego  pecados</title>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+
+
+</head>
+<body>
+
+    <body>
+        <div class="container">
+          <button class="novedoso-btn">SIGUIENTE NIVEL</button>
+        </div>
+      </body>
+
+
+    <div class="banner">
+        <a href="index.html">NIVEL 5</a></center>
+    </div>
+
+
+    <div class="empty">
+        Separador 
+    </div>
+
+    
+
+
+    <ul class="menu">
+
+
+        <li><a class="menu-item" href="index.html">Inicio</a></li>
+
+        <li><a class="menu-item" href="juego.html">Comienza el juego</a> </li>
+    </ul>
+
+
+
+    <div class="content">
+
+        <button class="accordion"><strong>¿Consecuencias?</strong></button>
+        <div class="panel">
+           <p>El enojo descontrolado trae consecuencias nefastas para el gerente: pérdida de socios y aliados, rechazo de colaboradores o fuga de talento. También repercute en el pensamiento: conduce a formular predicciones incorrectas por parcializadas. Pero la ira por sí sola no es el pecado. La transgresión ocurre cuando su torrente de energía vital es mal encauzado.</p>
+           <div class="image-grid">
+            <img src="imagenes/favicon.jpg" alt="favicon">
+            
+          </div>
+        </div>
+
+        <button class="accordion"><strong>¿Ira?</strong></button>
+        <div class="panel">
+           <p>Enójense, pero sin pecar; que el enojo no les dure hasta la puesta del sol, ni den oportunidad al diablo.</p>
+        </div>
+
+        
+        <div class="container-full">
+        <canvas id = 'juego' width='800' height='400'>Tu navegador no soporta Canvas.</canvas></center>
+        </div>
+
+  
+    
+
+    </div>
+
+    
+   
+    
+
+    <script src='js/main.js'></script>
+
+
+
+    <script>
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+      }
+    }
+
+    document.getElementsByClassName("novedoso-btn"),addEventListener("click", ()=>{
+        window.location. href = "http://127.0.0.1:5500/Levels/Level-7(Violencia)/index%20copy.html";
+    })
+
+    </script>
+    
+</body>
+</html>

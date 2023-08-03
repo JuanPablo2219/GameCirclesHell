@@ -1,0 +1,1 @@
+const words = ['Enojo','Ira','Muerte', 'Avaricia','Sucio','Soledad','Pecados','Envidia','Pereza','Deseo','Pecado','Pereza','Fuego','Angeles','Demonio','Gula','limbo','Hambre','Infierno'];
