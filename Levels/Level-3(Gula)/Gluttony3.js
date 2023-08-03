@@ -45,6 +45,16 @@ if(e.key ==="ArrowUp"  && velocityY !=1){
 
 const initGame = () => {
     if(gameOver) return handleGameOver();
+
+
+if (snakeBody.length===21){
+    alert("¡Has ganado!")
+    gameOver=true;
+    handleGameOver();
+    return;
+}
+
+
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
     
     if(snakeX === foodX && snakeY === foodY){
@@ -79,7 +89,6 @@ const initGame = () => {
             gameOver = true;
         }
     }    
-    
     playBoard.innerHTML = htmlMarkup;
 }
 
