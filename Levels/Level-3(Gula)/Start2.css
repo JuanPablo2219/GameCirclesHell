@@ -6,31 +6,21 @@ body {
   
   img{
    position:relative;
-    left: 10%;
+    left: 15%;
     padding: 4%;
-    border-radius: 10%;
+    border-radius: 15%;
   }
-  
-  .btn-infierno {
-    position: relative;
-    top: 50%;
-    left: 45%;
-    padding: 10px 14px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 30px;
-    color: #000000;
-    background-color: #ffffff;
-    cursor: pointer;
-    }
-    
-    .btn-infierno:hover {
-      background-color: #be2020;
-    }
-  
+
+
+  /*img:hover{
+    border-radius:0;
+  -webkit-border-radius:50%;
+  box-shadow: 0px 0px 15px 15px #fefefe;
+  -webkit-box-shadow: 0px 0px 15px 15px #000000;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  }*/
+
   
     .cont1 {
     display: flex;
@@ -47,13 +37,16 @@ body {
     }
     
     .cont2 p {
-      max-width: 600px; 
+      max-width: 40%; 
       text-align: center; 
-      font-size: 18px; 
-      line-height: 1.2; 
+      font-size: 17px; 
+      line-height: 1.05; 
       color: #000000; 
+      padding: 10px 10px; 
+      height: 10vh;
+      border: 3px solid #fff;
+      font-family:Georgia, 'Times New Roman', Times, serif;
     }
-    
     
   .cont3 {
     display: flex; 
@@ -65,14 +58,85 @@ body {
     font-weight: bold;
   }
   
-  
-  .cont4 {
-    font-size: 16px;
-    text-align: left; 
+  .cont4 { 
     color: white;
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 15px;
-    
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .cont4 p.one{
+    border: 2px solid black;
+    max-width: 29%;
+    text-align: center;
+    padding: 10px 10px;
   }
   
+  .cont4 p.two{
+    border: 2px solid black;
+    max-width:25%;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .gif{
+    display: flex;
+    height: 10%;
+    width: 10%;
+  }
+  .btn-infierno {
+    background: #e4870d; 
+    color: #000000; 
+    border: 2px solid #fffefe; 
+    padding: 10px 14px;
+    border-radius: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .btn-infierno::after {
+    content: "";
+    background: #f70000; 
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .btn-infierno:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }
+
+  .btn-infierno:hover {
+    color: #fff;
+  animation-name: stretch;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.3);
+  }
+}
