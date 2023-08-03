@@ -19,10 +19,10 @@ const enemies = [
 
   new Enemy(120, 20, "white", 4,),
   // new Enemy(220, 20, "white", 5,),
-  new Enemy(320, 20, "white", 9),
+  new Enemy(320, 20, "white", 5),
   new Enemy(420, 20, "white", 6),
   new Enemy(520, 20, "white", 5),
-  new Enemy(620, 20, "white", 7),
+  new Enemy(620, 20, "white", 3),
   // new Enemy(720, 20, "white", 9),
   new Enemy(820, 20, "white", 4),
   
@@ -33,7 +33,7 @@ const enemies = [
   new Enemy(420, 100, "white", 5),
   new Enemy(520, 100, "white", 3),
   // new Enemy(620, 100, "white", 7),
-  new Enemy(720, 100, "white", 9),
+  new Enemy(720, 100, "white", 4),
   new Enemy(820, 100, "white", 5),  
 ];
 
@@ -53,7 +53,7 @@ function comenzarJuego() {
 
     if (timeRest <= 0) {
       clearInterval(temporizate);
-      document.getElementsByTagName("button")['0'].style.display = "block";
+      // document.getElementsByTagName("button")['0'].style.display = "block";
       
       timeRest = TIMEFULL;
 
@@ -65,8 +65,8 @@ function comenzarJuego() {
 }
 
 
-document.getElementsByTagName("button")['0'].style.display = "none";
-document.getElementById("second");
+// document.getElementsByTagName("button")['0'].style.display = "none";
+// document.getElementById("second");
 comenzarJuego();
 
 
