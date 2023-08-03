@@ -1,14 +1,18 @@
 //alerta inicio//
-
+let myaler = document.getElementById("myAlert");
 function closeAlert() {
     document.getElementById("myAlert").style.display = "none";
 }
-document.getElementById(myAlert).style.display = "block ";
+// document.getElementById(myAlert).style.display = "block ";
 
 function closeAlert() {
-    var alert = document.getElementById("myAlert");
+    let alert = document.getElementById("myAlert");
     alert.classList.add("hidden");
   
-    var imageContainer = document.getElementById("imageContainer");
+    let imageContainer = document.getElementById("imageContainer");
     imageContainer.classList.remove("hidden");
+  }
+
+  function retryGame(){
+    location.reload();
   }
