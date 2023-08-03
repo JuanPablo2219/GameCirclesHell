@@ -132,3 +132,8 @@ function isLetter(value) {
 
 // Actualizar el estado inicial del juego
 updateGameStatus();
+
+
+document.getElementById("finally").addEventListener("click", ()=>{
+  window.location.href="http://127.0.0.1:5500/Levels/Level-1(Limbo)/index.html";
+})
