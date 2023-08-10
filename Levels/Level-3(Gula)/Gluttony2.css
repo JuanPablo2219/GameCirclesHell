@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("img/Gula.png"); 
+    background-image: url("img/8Hh6.gif"); 
     background-size:100%  100%;  
     background-repeat: no-repeat; 
     display: flex;
@@ -32,17 +32,17 @@ body {
     display: flex;
 }
 .score{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .play-board{
-    width: 100%;
+    width:100%;
     height: 100%;
     display: grid;
     grid-template:repeat(30, 1fr) / repeat(30, 1fr); 
     grid-gap: 1px;
     border: 5px solid rgb(230, 230, 230);
-    background-image: url(img/Dante2.png);
+    background-image: url(img/7lfP.gif);
     background-size:100%  100%;  
 
 }
@@ -50,6 +50,7 @@ body {
 .play-board .food{
     border-radius: 4px;
     background: #f70000;
+    border: 3px solid rgba(213, 224, 11, 0.638);
 }
 
 .play-board .head{
@@ -60,7 +61,7 @@ body {
 .btn-next{
 position: relative;
 top: 50%;
-left: 45%;
+left: 55%;
 padding: 10px 14px;
 font-weight: bold;
 text-align: center;
@@ -71,6 +72,42 @@ color: #000000;
 background-color: #fa09094b;
 }
 
-.btn-next:hover {
-    background-image: linear-gradient(to right, rgb(211, 95, 46), rgb(224, 108, 30), rgb(227, 28, 28), rgb(233, 103, 16), rgb(213, 163, 25), rgb(255, 0, 0));
+
+  .btn-next::after {
+    content: "";
+    background: #dcc113; 
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    left: -20%;
+    right: -20%;
+    top: -50%;
+    bottom: -50%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
   }
+  .btn-next:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }
+
+  .btn-next:hover {
+    color: #fff;
+  animation-name: stretch;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.3);
+  }
+}
